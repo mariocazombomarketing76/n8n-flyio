@@ -6,7 +6,7 @@ ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
 ENV N8N_BASIC_AUTH_PASSWORD=admin123
 ENV N8N_USER_FOLDER=/home/node/.n8n
-ENV WEBHOOK_URL=https://n8n-mario.fly.dev/
+ENV WEBHOOK_URL=https://github.com/mariocazombomarketing76/n8n-flyio
 ENV GENERIC_TIMEZONE=America/Luanda
 
 # Limitar memória usada pelo Node.js (importante para plano free)
