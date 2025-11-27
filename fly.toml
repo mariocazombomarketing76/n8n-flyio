@@ -8,7 +8,7 @@ app = "n8n-mario"
   N8N_BASIC_AUTH_USER = "admin"
   N8N_BASIC_AUTH_PASSWORD = "admin123"
   N8N_USER_FOLDER = "/home/node/.n8n"
-  WEBHOOK_URL = "https://n8n-mario.fly.dev/"
+  WEBHOOK_URL = "https://github.com/mariocazombomarketing76/n8n-flyio"
   GENERIC_TIMEZONE = "America/Luanda"
 
 [[services]]
