@@ -1,0 +1,29 @@
+app = "n8n-mario"
+
+[build]
+  image = "n8nio/n8n:latest"
+
+[env]
+  N8N_BASIC_AUTH_ACTIVE = "true"
+  N8N_BASIC_AUTH_USER = "admin"
+  N8N_BASIC_AUTH_PASSWORD = "admin123"
+  N8N_USER_FOLDER = "/home/node/.n8n"
+  WEBHOOK_URL = "https://n8n-mario.fly.dev/"
+  GENERIC_TIMEZONE = "America/Luanda"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20
