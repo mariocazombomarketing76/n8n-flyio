@@ -1,18 +1,21 @@
 app = "n8n-mario"
 
+primary_region = "jnb"
+
 [build]
   image = "n8nio/n8n:latest"
 
 [env]
+  GENERIC_TIMEZONE = "Africa/Luanda"
   N8N_BASIC_AUTH_ACTIVE = "true"
   N8N_BASIC_AUTH_USER = "admin"
   N8N_BASIC_AUTH_PASSWORD = "admin123"
-  N8N_USER_FOLDER = "/home/node/.n8n"
-  WEBHOOK_URL = "https://github.com/mariocazombomarketing76/n8n-flyio"
-  GENERIC_TIMEZONE = "America/Luanda"
+  N8N_HOST = "0.0.0.0"
+  N8N_PORT = "5678"
+  WEBHOOK_URL = "https://n8n-mario.fly.dev"
 
 [[services]]
-  internal_port = 8080
+  internal_port = 5678
   protocol = "tcp"
 
   [[services.ports]]
